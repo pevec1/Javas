@@ -31,5 +31,7 @@ let str2=String();
 str2='abcde';
 console.log(str2[0]+" "+str2[1]+" "+str2[4]);
 
-
+/*z9*/
+let mas=['Привет, ', 'мир', '!'];
+console.log(mas[0]+mas[1]+mas[2]);
 
