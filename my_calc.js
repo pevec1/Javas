@@ -138,7 +138,7 @@ function calcResult(num1, num2, operator) {
       result = Number(num1) * Number(num2);
       break;
     case "/":
-      result = Number(num1) / Number(num2);
+      result = Number(num2) == 0 ? "Делить на 0 нельзя!" : Number(num1) / Number(num2);
       break;
     case "%":
       result = Number(num1) % Number(num2);
