@@ -1,59 +1,93 @@
+let userChoice;
 let operator;
-let num1, num2;
-let result;
-
 let cancel = true;
+let cancel2 = true;
+let numbers = [];
 
 do {
-  operator = prompt("Выберите операцию (+, -, *, /, %, sq, ^, exit)");
+  let result;
+  userChoice = prompt("1. Калькулятор\n 2. Выход)");
 
-  switch (operator) {
-    case "+":
-      alert(result);
-      break;
-    case "-":
-      num1 = prompt("1-е число:");
-      num2 = prompt("2-е число:");
-      result = Number(num1) - Number(num2);
-      break;
-    case "*":
-      num1 = prompt("1-е число:");
-      num2 = prompt("2-е число:");
-      result = Number(num1) * Number(num2);
-      break;
-    case "/":
-      num1 = prompt("1-е число:");
-      num2 = prompt("2-е число:");
-      result = Number(num1) / Number(num2);
-      break;
-    case "%":
-      num1 = prompt("1-е число:");
-      num2 = prompt("2-е число:");
-      result = Number(num1) % Number(num2);
-      break;
-    case "sq":
-      num1 = prompt("Число:");
-      num2 = prompt("Степень корня:");
-      result = Math.pow(Number(num1), 1 / Number(num2));
-      break;
-    case "^":
-      num1 = prompt("Число:");
-      num2 = prompt("Степень:");
-      result = Math.pow(Number(num1), Number(num2));
-      break;
-    case "exit":
+  switch (userChoice) {
+    case "1":
+      do{
+
+      operator = prompt("Выберите операцию (+, -, *, /, %, sq, ^)");
+      switch (operator) {
+        case "+":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+
+        case "-":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case "*":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case "/":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case "%":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case "sq":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case "^":
+          result = setNumbers(operator);
+          alert(result);
+          break;
+        case null:
+          cancel2 = false;
+          result = "Вы вышли!";
+          break;
+        default:
+          result = "Вы ошиблись! Нет такой операции!!!";
+          alert(result);
+          break;
+      }
+    }while(cancel2);
+
+    
+    case "2":
     case null:
       cancel = false;
+      result = "Вы вышли!";
       break;
     default:
       alert("Вы ошиблись! Нет такой операции!!!");
   }
-  // alert(result);
 } while (cancel);
 
-function cheking(){
+//alert(result);
+
+// function checkNumber(num) {
+//   let result = +num;
+
+//   if (typeof num == "object") {
+//     result = "Вы отменили!";
+//   }
+//   if (num == "" || isNaN(+num) || num == 0) {
+//     result = true;
+//   }
+
+//   if (typeof result == "string") {
+//     alert("Вы ввели пустую строку или не число!");
+//     return false;
+//   }
+//   return result;
+// }
+
+function setNumbers(operator) {
       let flagNum1;
       let flagNum2;
+      let result;
       do {
         flagNum1 = false;
         num1 = prompt("1-е число:");
@@ -79,10 +113,43 @@ function cheking(){
               alert("Вы ввели пустую строку или не число!");
               flagNum2 = true;
             } else {
-              result = Number(num1) + Number(num2);
+              result = calcResult(num1, num2, operator);
             }
           } while (flagNum2);
         }
       } while (flagNum1);
-return result;
+  return result;
+    
+  }
+
+function calcResult(num1, num2, operator) {
+  let result;
+
+  switch (operator) {
+    case "+":
+      result = Number(num1) + Number(num2);
+      break;
+    case "-":
+      result = Number(num1) - Number(num2);
+      break;
+    case "*":
+      result = Number(num1) * Number(num2);
+      break;
+    case "/":
+      result = Number(num1) / Number(num2);
+      break;
+    case "%":
+      result = Number(num1) % Number(num2);
+      break;
+    case "sq":
+      result = Math.pow(Number(num1), 1 / Number(num2));
+      break;
+    case "^":
+      result = Math.pow(Number(num1), Number(num2));
+      break;
+    default:
+      result = "Вы ошиблись! Нет такой операции!!!";
+  }
+
+  return result;
 }
