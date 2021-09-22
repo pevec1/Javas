@@ -53,7 +53,8 @@ do {
           break;
       }
     }while(cancel2);
-
+    cancel = true;
+    break;
     
     case "2":
     case null:
@@ -63,9 +64,10 @@ do {
     default:
       alert("Вы ошиблись! Нет такой операции!!!");
   }
+  alert(result);
 } while (cancel);
 
-//alert(result);
+//
 
 // function checkNumber(num) {
 //   let result = +num;
