@@ -30,3 +30,20 @@ function printResult() {
   );
   document.write(`${partY}-я часть числа ${y} = ` + getPartNumber(y, partY));
 }
+
+let b =[];
+let a = ["Андрей", "груша", "апельсин"];
+let x =[];
+let y;
+let j;
+for (let i=0;i<=a.length;i++) {
+  j=j+1;
+  if(a[i]==",") {
+    x[j]=a[i];
+  }
+}
+for(j=1;j<=x.length;j++){
+  for(i=0;i<=x[j];i++) {
+    y=y+a[i];
+  }
+}
