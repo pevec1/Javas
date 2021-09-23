@@ -15,17 +15,14 @@ function setParams() {
       a = prompt("Число a:");
       if (typeof a === "object") {
         flag1 = false;
-        flag2 = false;
         break;
       }
-      if (a <= 0 || String(a).length != 1) {
-        flag1 = true;
+      if (a > 0 && String(a).length == 1) {
+        flag1 = false;
       } else if (a === "" || isNaN(+a)) {
         alert("Число a задано неверно.");
         flag1 = true;
-      } else {
-        flag1 = false;
-      }
+      } 
     } while (flag1);
     do {
       b = prompt("Число b:");
@@ -34,16 +31,15 @@ function setParams() {
         console.log(b);
         break;
       }
-      if (b < 0 || String(b).length != 1) {
-        flag2 = true;
+      if (b > 0 && String(b).length == 1) {
+        flag2 = false;
       } else if (b === "" || isNaN(+b)) {
         alert("Число b задано неверно.");
         flag2 = true;
-      } else {
-        calcResult();
-      }
+      } 
     } while (flag2);
   } while (flag1 || flag2);
+        calcResult();
 }
 
 function calcResult() {
