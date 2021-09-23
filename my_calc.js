@@ -60,11 +60,12 @@ do {
     case null:
       cancel = false;
       result = "Вы вышли!";
+      alert(result);
       break;
     default:
       alert("Вы ошиблись! Нет такой операции!!!");
   }
-  alert(result);
+  //alert(result);
 } while (cancel);
 
 //
