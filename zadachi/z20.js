@@ -9,7 +9,7 @@ res1 = calcResult1(number);
 
 alert(`Масса тела равна  ${res1} кг`);
 
-//Функция, вычисляющая результат в зависимости от флага (чётное или нечётное число)
+
 function calcResult1(num) {
   return num/1000;
 }
