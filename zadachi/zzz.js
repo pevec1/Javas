@@ -27,7 +27,7 @@ j = 0;
 output_massive[0] = "";
 
 //************определение выходного массива ***********/
-document.write("<br>Massive <br>");
+document.write(`<br>Massive ${stroka.length}<br>`);
 
 //пока позиция разделителя меньше длинны строки
 while (divider[j] < stroka.length) {
