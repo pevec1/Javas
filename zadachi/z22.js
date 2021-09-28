@@ -1,21 +1,24 @@
 //22.
 //Напишите программу, которая принимает с клавиатуры два числа, образующих ответ на вопрос «который час?» (первое – часы, второе минуты, например, 15 и 42) и выводит на экран следующие значения (каждое – в отдельной строке): сколько секунд прошло с полуночи да «данного момента» и сколько минут прошло за это же время, а также сколько минут осталось до полуночи.
 
-let result; //результат вычисления
+let result, setResult; //результат вычисления
 
-
-result = setNumbers();
-itogo = calcResult(result);
-alert(`Ваш результат ${itogo[0]}`);
-alert(`Ваш результат ${itogo[1]}`);
-alert(`Ваш результат ${itogo[2]}`);
+setResult = setNumbers();
+result = calcResult(setResult);
+alert(
+  `Ваш результат ${result[0]} секунд прошло с полуночи до «данного момента» <br>`
+);
+alert(
+  `Ваш результат ${result[1]} минут прошло с полуночи до «данного момента» <br>`
+);
+alert(`Ваш результат ${result[2]} минут осталось до полуночи`);
 
 function calcResult(result) {
-    let hours=result[0];
-    let minutes = result[1];
-    res1 = hours*60*60 + minutes*60;
-    res2 = res1 / 60;
-    res3 = 24*60 - res2;
+  let hours = result[0];
+  let minutes = result[1];
+  res1 = hours * 60 * 60 + minutes * 60;
+  res2 = res1 / 60;
+  res3 = 24 * 60 - res2;
   return [res1, res2, res3];
 }
 
@@ -24,7 +27,7 @@ function setNumbers() {
   let flagNum2;
   let result;
   do {
-      alert("Который час?")
+    alert("Который час?");
     flagNum1 = false;
     num1 = prompt("Введите количество часов:");
 

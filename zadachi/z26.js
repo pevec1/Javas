@@ -9,15 +9,15 @@ inputNumber.addEventListener("input", updateValue);
 function updateValue(e) {
    if (Number(e.target.value) > 9 && String(e.target.value).length == 2) {
     let str = String(e.target.value);
-    let str1 = str.substring(0, 1);
+    let number1 = str.substring(0, 1);
 
-    let str2 = str.substring(1, 2);
+    let number2 = str.substring(1, 2);
 
-    user.textContent = str1 + " " + str2;
+    user.textContent = number1 + " " + number2;
 
   } else if (e.target.value === "") {
     user.textContent = "Введите число.";
-  } else if (e.target.value.length >= 2) {
+  } else if (e.target.value.length > 2) {
     user.textContent = "Число задано неверно.";
   }
 }
