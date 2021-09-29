@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .text {
+    font-family: "Georgia", serif;
+}
+
+.hightlight {
+    box-shadow: 0 0 10px 5px gold;
+}
+
+.space {
+    padding: 30px;
+}
+
+.bg {
+    background-color: darkgreen;
+    color: white;
+}    
+    </style>
+</head>
+<body>
+<h1>Заголовок</h1>
+
+    <div class="sec1">
+        <h2>Подзаголовок</h2>
+        <p class="text bg space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, atque quam qui placeat soluta quia commodi facere assumenda mollitia. Doloremque soluta accusantium sit beatae porro modi suscipit qui. Tenetur, voluptatem.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quisquam incidunt hic accusamus repellat dolore id omnis nulla est. Hic minus inventore vero reiciendis molestiae blanditiis maiores ipsa commodi. Accusamus.</p>
+    </div>
+    
+    <div class="sec2">
+        <h2 id="title">Подзаголовок</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis iure, odio officiis quas inventore dolores voluptas totam pariatur ullam aut modi illum. Neque ea officiis possimus illum, deleniti nulla.</p>
+    </div>
+
+    <button id="btnHihgtLight">Включить</button>
+<script>
+    let btnHightLight = document.getElementById("btnHihgtLight");
+let pSec = document.querySelectorAll("p");
+
+btnHightLight.addEventListener("click", setHightLight);
+
+function setHightLight() {
+    for (let p of pSec) {
+        p.classList.toggle("bg");
+        p.classList.toggle("space");
+    }
+    if (btnHightLight.textContent == "Выключить") {
+        btnHightLight.textContent = "Включить";
+    } else {
+        btnHightLight.textContent = "Выключить";
+    }
+}
+
+</script>	
+</body>
+</html>
