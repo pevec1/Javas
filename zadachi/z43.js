@@ -3,6 +3,6 @@
 
 let value = [1, 2, 3, 4, 5];
 
-for (let i=0;i<5;i++){
+for (let i=0;i<value.length;i++){
     document.write(value[i]+'<br>');
 }

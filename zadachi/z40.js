@@ -18,12 +18,28 @@
 //     alert(e.target.src);
 // }
 
+// let theParent = document.querySelector("#parent");
+// for (let i = 0; i < theParent.children.length; i++) {
+//   let childElement = theParent.children[i];
+//   if(childElement instanceof HTMLImageElement) {}
+//   childElement.addEventListener("click", doSomething, false);
+// }
+// function doSomething(e) {
+//   console.d
+//   let clickedItem = e.target.src;
+//   alert("Ссылка " + clickedItem);
+// }
+
 let theParent = document.querySelector("#parent");
 for (let i = 0; i < theParent.children.length; i++) {
-  let childElement = theParent.children[i];
-  childElement.addEventListener("click", doSomething, false);
+    let childElement = theParent.children[i];
+    if (childElement instanceof HTMLImageElement) {
+        childElement.addEventListener("click", doSomething, false);
+    }
 }
+
 function doSomething(e) {
-  let clickedItem = e.target.src;
-  alert("Ссылка " + clickedItem);
+    // console.dir(e);
+    let clickedItem = e.target.src;
+    alert("Ссылка " + clickedItem);
 }
