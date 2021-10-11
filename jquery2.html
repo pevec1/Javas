@@ -1,0 +1,34 @@
+$("#pmtog").css("backgroundColor", "green"); //1
+    $("p.pr1").css("color", "red"); //2
+    $(":button:first").css("backgroundColor", "orange"); //3
+    $(".pmb1, .pmb2, .pmb3").css("color", "blue"); //4
+    $("#wrap1 .pmtobr").css("color", "brown"); //5
+    $("img:eq(2)").css("border", "5px solid red"); //6
+    $("#iwrap input:first, #iwrap input:last").css("backgroundColor", "red"); //7
+
+ let i = 0;
+
+    $("#but2").click(function () {
+        switch (i) {
+            case 0:
+                $("#par2").css("color", "red");
+                $("#par2").css("font-family", "Times New Roman");
+                $("#par2").css("border", "none");
+                break;
+            case 1:
+                $("#par2").css("color", "blue");
+                $("#par2").css("font-family", "Arial");
+                break;
+            case 2:
+                $("#par2").css("font-weight", "bold");
+                $("#par2").css("font-family", "Verdana");
+                $("#par2").css("border", "1px solid blue");
+                break;
+        }
+        i++;
+
+        if (i == 3) {
+            i = 0;
+        }
+    });
+   
