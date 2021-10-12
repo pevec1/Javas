@@ -17,6 +17,13 @@
     border: 2px solid brown;
     border-radius: 10px;
 }
+.btn-primary:focus {
+    background-color:white;
+    color: brown;
+    border: 2px solid brown;
+    border-radius: 10px;
+    box-shadow:0 0 0 0.25rem brown;
+}
 
 .btn-primary:active {
     background-color:white;
@@ -30,7 +37,7 @@
     color: white;
     border: 2px solid brown;
     border-radius: 10px;
-    box-shadow: brown;
+    box-shadow:0 0 0 0.25rem brown;
 }
 .card-title {
     font-size: 20px;
