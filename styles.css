@@ -32,6 +32,9 @@
     border-radius: 10px;
     box-shadow: brown;
 }
+.btn-primary:active:focus {
+    box-shadow: 0 0 0 0.25rem brown;
+}
 /* .btn-primary:visited {
     background-color:brown;
     color: white;
