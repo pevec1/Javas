@@ -33,7 +33,7 @@
     box-shadow: brown;
 }
 .btn-primary:visited {
-    background-color:brown;
+    /* background-color:brown; */
     color: white;
     border: 2px solid brown;
     border-radius: 10px;
