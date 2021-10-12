@@ -12,7 +12,8 @@
 }
 
 .btn-primary:hover {
-    background-color:brown;
+    background-color:white;
+    color: brown;
     border: 2px solid brown;
     border-radius: 10px;
 }
